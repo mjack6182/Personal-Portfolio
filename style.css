@@ -1,0 +1,239 @@
+/* Reset HTML and body to ensure full viewport usage */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make body fill the full height of the viewport */
+    width: 100%;
+    font-family: 'Syne Mono', sans-serif;
+}
+.syne-mono-regular {
+    font-family: "Syne Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Background container for Particles.js */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Send behind all other content */
+    background-color: white; /* Fallback background color (black) */
+}
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+.personalPic {
+    width: 250px;                  /* Set width of the circle */
+    height: 250px;                 /* Set height of the circle */
+    border-radius: 50%;           /* Makes the image circular */
+    object-fit: cover;            /* Ensures the image fills the circle */
+    object-position: top;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.name {
+    font-size: 3.5rem;            /* Adjust font size */
+    font-weight: bold;            /* Make the name bold */
+    color: #333;                  /* Text color */
+    margin-bottom: 10px;
+}
+.degree {
+    font-size: 1.2rem;
+    color: #555;
+}
+.minor{
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0 15px 0; /* Margin between degree and social icons */
+
+}
+.socials {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    list-style: none;
+}
+nav ul li{
+    margin-right: 20px;
+}
+
+/* Container holding all sections */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of sections for smaller screens */
+    gap: 20px; /* Optional: space between the sections */
+    padding: 20px;
+}
+.left-sections, .projects{
+    flex: 1;
+}
+.left-sections {
+    display: flex;
+    flex-direction: column; /* Stack the About and Coursework sections vertically */
+}
+/* Base styling for all sections */
+section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for the About and Coursework sections */
+.about,
+.course-work {
+    margin: 10px 0;
+}
+
+/* Projects section takes more space */
+.projects {
+    height: 100%;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.tech-bubble {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.tech-bubble span {
+    background-color: #FF0000; /* Green bubble background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+/* Animation keyframes */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Starts slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at its original position */
+    }
+}
+
+/* Apply the animation */
+.fade-slide-in {
+    animation: fadeSlideIn 1s ease-out forwards; /* Play animation over 1 second */
+    opacity: 0; /* Ensures it's hidden initially */
+}
+
+
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 700px;
+    border-left: 2px solid #ccc; /* Vertical line */
+}
+
+/* Individual timeline events */
+.timeline-event {
+    position: relative;
+    margin-bottom: 40px; /* Space between events */
+    padding-left: 30px; /* Space for the dot */
+}
+
+/* Timeline dot */
+.timeline-dot {
+    position: absolute;
+    left: -8px; /* Adjust position to align with the line */
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #FF0000; /* Blue dot */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline content */
+.timeline-content {
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    color: #555; /* Gray text */
+    font-size: 0.9rem;
+}
+.timeline-event {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.timeline-event.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Align items horizontally on larger screens */
+    }
+
+    section {
+        width: auto; /* Remove the 100% width to allow flexbox to manage the layout */
+    }
+
+    .left-sections {
+        flex-direction: column; /* Keep About and Coursework stacked */
+        max-width: 25%; /* Optional: adjust as needed */
+    }
+}
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+<div class="profile">
+  <img src="personal%20pic.JPG" class= "personalPic" alt="picture of me">
+  <div class="profileInfo">
+    <h1 class="name">Jack Miller</h1>
+    <h2 class = "degree">B.S. Computer Science - Expected Graduation Spring 2026</h2>
+    <h3 class ="minor"> Minor in Web Development</h3>
+    <div class="socials">
+      <a href="https://github.com/mjack6182" target="_blank" title=" Visit my Github">
+        <img src="github.svg" alt="GitHub" class="social-icon">
+      </a>
+      <a href="https://www.linkedin.com/in/mjack6182" target="_blank" title=" Visit my LinkedIn">
+        <img src="linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      <div class="resume">
+        <a href="Jack%20Miller%20resume%2012_20_2024.pdf" download="JohnDoe_Resume" class="resume-link" title="Download my resume">
+          <img src="file-lines.svg" alt="Download Resume" class="social-icon">
+        </a>
+      </div>
+      <!-- Email link -->
+      <div class="email">
+        <a href="mailto:jmiller22b@gmail.com" class="email-link" title="Email me">
+          <img src="envelope.svg" alt="Email" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class = "container">
+  <section class ="about">
+  <h2>About</h2>
+  <p>
+    Hello, my name is Jack Miller and I am currently a student at The University of Wisconsin Parkside. I have a strong
+    interest in web development and software development. I have enjoyed learning new technologies and coding since a young age.
+    I knew I always wanted to do something related to technology because I had an edge that other people in my family didn't have.
+  </p>
+</section>
+  <div class = "left-sections">
+    <section class ="Achievements">
+      <h2>Achievements</h2>
+      <h3>Deans & Provost's List | Fall 2024</h3>
+      <h3>Deans & Provost's List | Spring 2023</h3>
+      <h3>Secretary of Computer Club at UWP</h3>
+
+    </section>
+    <section class = "course-work">
+      <h2>Relevant Course Work</h2>
+      <div class="course-bubbles">
+        <span class="course" data-course="cs130">Introduction to Programming</span>
+        <span class="course" data-course="cs279">Basic Information Security</span>
+        <span class="course" data-course="cs231">Discrete Mathematics</span>
+        <span class="course" data-course="cs241">Computer Science I</span>
+        <span class="course" data-course="cs309">Probability and Statistics</span>
+        <span class="course" data-course="cs220">Client Web Programming</span>
+        <span class="course" data-course="cs242">Computer Science II</span>
+        <span class="course" data-course="cs245">Assembly Language Programming</span>
+        <span class="course" data-course="cs322">Server Web Programming</span>
+        <span class="course" data-course="cs324">Mobile Development in IOS</span>
+        <span class="course" data-course="cs340">Data Structures/Algorithm Design</span>
+        <span class="course" data-course="cs355">Computer Architecture</span>
+        <span class="course" data-course="cs380">Database Management Systems</span>
+      </div>
+
+    </section>
+    <section class = "Work Experience">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Shift Lead</h3>
+            <p>Walgreens</p>
+            <p>October 2024 - Present</p>
+            <p>Description of responsibilities and achievements.</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Manager</h3>
+            <p>Jimmy Johns</p>
+            <p>August 2020 - October 2024</p>
+            <p>Description of responsibilities and achievements.</p>
+          </div>
+        </div>
+        <!-- Add more timeline events as needed -->
+      </div>
+
+    </section>
+  </div>
+  <!-- Pop-up Modal -->
+  <div id="course-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4 id="modal-title"></h4>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+
+<section class = "projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Volga</h3>
+      <div class="tech-bubble">
+        <span>HTML</span> <span>CSS</span> <span>JavaScript</span><span>jQuery</span>
+      </div>
+      <p>
+        Volga was a School Project to create a responsive online book marketplace using HTML,CSS, and JavaScript with JQuery
+        featuring an intuitive interface inspired by leading e-commerce websites. Built a multi-page registration form with dynamic client-side validation, providing real-time feedback on invalid
+        inputs and contextual help when interacting with each section.
+      </p>
+      <a href="https://github.com/mjack6182/Volga" target="_blank"><img src="volga.png" alt="volga" class="project-image"></a>
+    </div>
+      <div class="project">
+        <h3>Catering Execution</h3>
+        <div class="tech-bubble">
+          <span>Python</span> <span>Google Vision API</span> <span>React</span>
+        </div>
+        <p>
+          Developed a Python project using the Google Vision API to scan and categorize receipts, achieving an 83.3% increase
+          in efficiency compared to manual processing.
+          Implemented a backend that processes uploaded files and generates an Excel sheet to the frontend.
+        </p>
+        <a href="https://github.com/bjrodrigu/Catering-Project" target="_blank"><img src="volga.png" alt="volga" class="project-image"></a>
+      </div>
+    <div class="project">
+      <h3>La Fe Cafe Website</h3>
+      <div class="tech-bubble">
+        <span>React</span> <span>Vite</span><span>Node</span> <span>Google Places API</span>
+      </div>
+      <p>
+        My Grandmother owns a Mexican Restaurant in Kenosha, Wisconsin. They are a small business and didn't think to budget for
+        a website. I wanted to get more experience, so I created one for them. Through their point of service system I was able to
+        turn on online ordering for them hoping to boost sales.
+      </p>
+      <a href="https://github.com/mjack6182/Volga" target="_blank"><img src="volga.png" alt="volga" class="project-image"></a>
+    </div>
+    <div class="project">
+      <h3>Synonyms</h3>
+      <div class="tech-bubble">
+        <span>Java</span>
+      </div>
+      <p>
+        Developed a Synonyms analysis tool that process a URL-based text corpus,storing words efficiently in a double-nested
+        HashMap for quick lookups and computation. Implemented a cosine similarity algorithm to calculate an compare word
+        relationships based on user input, enabling accurate similarity analysis.
+      </p>
+      <a href="https://github.com/mjack6182/Volga" target="_blank"><img src="volga.png" alt="volga" class="project-image"></a>
+    </div>
+  </section>
+</div>
+<canvas class="background"></canvas>
+<script src="popup.js"></script>
+<script src="particles.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
