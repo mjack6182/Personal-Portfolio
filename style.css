@@ -134,9 +134,6 @@ section {
     border-radius: 20px; /* Rounded corners */
     font-size: 0.9rem;
     white-space: nowrap;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
 }
 /* Animation keyframes */
