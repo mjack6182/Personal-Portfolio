@@ -19,6 +19,9 @@
     text-overflow: ellipsis;
     max-width: 100%;
 }
+.course:hover {
+    background-color: #da0d0d;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -65,4 +68,30 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.view-more{
+    border:none;
+    background: #FF0000;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.view-more:hover{
+    background: #da0d0d;
+}
+
+/* Hide "View More" button on larger screens */
+@media (min-width: 768px) {
+    .view-more {
+        display: none;
+    }
+}
+
+/* Hide description on small screens */
+@media (max-width: 768px) {
+    .short-desc {
+        display: none;
+    }
 }

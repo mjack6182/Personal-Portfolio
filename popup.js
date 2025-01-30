@@ -63,10 +63,8 @@ const courseDescriptions = {
 
 
 // Get modal elements
-const modal = document.getElementById("course-modal");
-const modalTitle = document.getElementById("modal-title");
-const modalDescription = document.getElementById("modal-description");
-const closeModal = document.getElementsByClassName("close")[0];
+const modal = document.querySelectorAll('.modal');
+const closeModalButtons = document.querySelectorAll('.close');
 
 // Open modal with course info when clicked
 document.querySelectorAll(".course").forEach(course => {
@@ -75,6 +73,10 @@ document.querySelectorAll(".course").forEach(course => {
         const courseInfo = courseDescriptions[courseId];
 
         if (courseInfo) {
+            const modal = document.getElementById("course-modal");
+            const modalTitle = modal.querySelector("#modal-title");
+            const modalDescription = modal.querySelector("#modal-description");
+
             modalTitle.innerText = courseInfo.title;
             modalDescription.innerText = courseInfo.description;
 
@@ -88,15 +90,21 @@ document.querySelectorAll(".course").forEach(course => {
     });
 });
 
-// Close modal when user clicks on <span> (x)
-closeModal.onclick = function() {
+// Function to close modal (applies to both work experience and course modals)
+function closeModalFunction(modal) {
     modal.classList.remove("show");
     modal.querySelector(".modal-content").classList.remove("show");
     setTimeout(() => {
-        modal.style.display = "none"; // Hide the modal after animation
+        modal.style.display = "none";
     }, 300); // Wait for the animation to finish before hiding
 }
-
+// Close modal when user clicks on <span> (x)
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const modal = this.closest('.modal');
+        closeModalFunction(modal);
+    });
+});
 // Close modal if user clicks anywhere outside the modal
 window.onclick = function(event) {
     if (event.target === modal) {
@@ -126,5 +134,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const courseWorkSection = document.querySelector(".course-work");
     courseWorkSection.classList.add("fade-slide-in");
 });
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = "block";
+        setTimeout(() => {
+            modal.classList.add("show");
+        }, 10);
+    }
+}
+
+
+//Close modal when clicking outside of it
+window.onclick = function(event) {
+    document.querySelectorAll(".modal").forEach(modal => {
+        if (event.target === modal || event.target === closeModal) {
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300);
+        }
+    });
+};
 
 
