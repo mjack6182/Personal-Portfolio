@@ -205,11 +205,10 @@ body, html {
     font-size: 1.2rem;
 }
 
-.timeline-content li {
+.timeline-content p {
     margin: 5px 0;
     color: #555; /* Gray text */
     font-size: 0.9rem;
-    list-style: none;
 }
 .timeline-event {
     opacity: 0;
