@@ -118,6 +118,7 @@ section {
     height: 100%;
     padding: 10px;
     margin-left: 20px;
+    gap:10px
 }
 
 .tech-bubble {
@@ -234,6 +235,12 @@ body, html {
     .left-sections {
         flex-direction: column; /* Keep About and Coursework stacked */
         max-width: 25%; /* Optional: adjust as needed */
+    }
+}
+@media (max-width: 768px) {
+    .projects {
+        margin-left: 0; /* Remove the margin on smaller screens */
+        width: 100%; /* Ensure it spans the full width */
     }
 }
 
