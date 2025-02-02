@@ -14,11 +14,11 @@ html, body {
 
 /* Background container for Particles.js */
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     z-index: -1; /* Send behind all other content */
     background-color: white; /* Fallback background color (black) */
 }
@@ -69,6 +69,7 @@ html, body {
     height: 30px;
     object-fit: cover;
     transition: transform 0.2s ease;
+    color:black;
 }
 
 .social-icon:hover {
@@ -89,8 +90,6 @@ nav ul li{
 .container {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of sections for smaller screens */
-    gap: 20px; /* Optional: space between the sections */
-    padding: 20px;
 }
 .left-sections, .projects{
     flex: 1;
@@ -159,7 +158,6 @@ section {
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 /* Timeline container */
