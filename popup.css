@@ -83,14 +83,14 @@
 }
 
 /* Hide "View More" button on larger screens */
-@media (min-width: 768px) {
+@media (min-width: 1500px) {
     .view-more {
         display: none;
     }
 }
 
 /* Hide description on small screens */
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
     .short-desc {
         display: none;
     }
